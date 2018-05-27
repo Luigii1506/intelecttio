@@ -3,11 +3,11 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _45af8cb2 = () => import('../pages/server.vue' /* webpackChunkName: "pages/server" */).then(m => m.default || m)
-const _66a7050b = () => import('../pages/books.vue' /* webpackChunkName: "pages/books" */).then(m => m.default || m)
-const _8eb91736 = () => import('../pages/animation.vue' /* webpackChunkName: "pages/animation" */).then(m => m.default || m)
-const _e0d701d0 = () => import('../pages/book.vue' /* webpackChunkName: "pages/book" */).then(m => m.default || m)
-const _866c919a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _0e85c012 = () => import('..\\pages\\server.vue' /* webpackChunkName: "pages_server" */).then(m => m.default || m)
+const _53a77526 = () => import('..\\pages\\books.vue' /* webpackChunkName: "pages_books" */).then(m => m.default || m)
+const _51685f00 = () => import('..\\pages\\animation.vue' /* webpackChunkName: "pages_animation" */).then(m => m.default || m)
+const _5defc0c6 = () => import('..\\pages\\book.vue' /* webpackChunkName: "pages_book" */).then(m => m.default || m)
+const _ac6bb164 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
 
@@ -69,27 +69,27 @@ export function createRouter () {
     routes: [
 		{
 			path: "/server",
-			component: _45af8cb2,
+			component: _0e85c012,
 			name: "server"
 		},
 		{
 			path: "/books",
-			component: _66a7050b,
+			component: _53a77526,
 			name: "books"
 		},
 		{
 			path: "/animation",
-			component: _8eb91736,
+			component: _51685f00,
 			name: "animation"
 		},
 		{
 			path: "/book",
-			component: _e0d701d0,
+			component: _5defc0c6,
 			name: "book"
 		},
 		{
 			path: "/",
-			component: _866c919a,
+			component: _ac6bb164,
 			name: "index"
 		}
     ],

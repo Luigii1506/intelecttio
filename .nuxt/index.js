@@ -12,9 +12,9 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
-import nuxt_plugin_vuetify_7b76339d from 'nuxt_plugin_vuetify_7b76339d' // Source: ../plugins/vuetify.js
-import nuxt_plugin_vueresource_57806eeb from 'nuxt_plugin_vueresource_57806eeb' // Source: ../plugins/vue-resource
-import nuxt_plugin_vuefire_1654c086 from 'nuxt_plugin_vuefire_1654c086' // Source: ../plugins/vuefire
+import nuxt_plugin_vuetify_7b76339d from 'nuxt_plugin_vuetify_7b76339d' // Source: ..\\plugins\\vuetify.js
+import nuxt_plugin_vueresource_57806eeb from 'nuxt_plugin_vueresource_57806eeb' // Source: ..\\plugins\\vue-resource
+import nuxt_plugin_vuefire_1654c086 from 'nuxt_plugin_vuefire_1654c086' // Source: ..\\plugins\\vuefire
 
 
 // Component: <no-ssr>
