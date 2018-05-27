@@ -4,9 +4,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const _45af8cb2 = () => import('../pages/server.vue' /* webpackChunkName: "pages/server" */).then(m => m.default || m)
-const _8eb91736 = () => import('../pages/animation.vue' /* webpackChunkName: "pages/animation" */).then(m => m.default || m)
 const _66a7050b = () => import('../pages/books.vue' /* webpackChunkName: "pages/books" */).then(m => m.default || m)
-const _1824c12a = () => import('../pages/preguntas.vue' /* webpackChunkName: "pages/preguntas" */).then(m => m.default || m)
+const _8eb91736 = () => import('../pages/animation.vue' /* webpackChunkName: "pages/animation" */).then(m => m.default || m)
 const _866c919a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
@@ -62,7 +61,7 @@ const scrollBehavior = function (to, from, savedPosition) {
 export function createRouter () {
   return new Router({
     mode: 'history',
-    base: '/',
+    base: '/intelecttio/',
     linkActiveClass: 'nuxt-link-active',
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior,
@@ -73,19 +72,14 @@ export function createRouter () {
 			name: "server"
 		},
 		{
-			path: "/animation",
-			component: _8eb91736,
-			name: "animation"
-		},
-		{
 			path: "/books",
 			component: _66a7050b,
 			name: "books"
 		},
 		{
-			path: "/preguntas",
-			component: _1824c12a,
-			name: "preguntas"
+			path: "/animation",
+			component: _8eb91736,
+			name: "animation"
 		},
 		{
 			path: "/",

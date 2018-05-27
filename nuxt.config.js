@@ -1,5 +1,11 @@
 const pkg = require('./package');
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/intelecttio/'
+  }
+} : {}
+
 module.exports = {
   mode: 'spa',
 
@@ -27,6 +33,7 @@ module.exports = {
     ]
   },
 
+  ...routerBase,
   /*
   ** Customize the progress-bar color
   */
