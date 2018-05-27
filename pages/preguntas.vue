@@ -46,11 +46,11 @@
 
 
 <script>
-import PreguntaMultiple from '@/PreguntaMultiple'
+import PreguntaMultiple from '@components/PreguntaMultiple'
 export default {
     components:{
         PreguntaMultiple,
-        CuentaPalabras
+        
     },
     methods:{
         busca: function(busca,donde){

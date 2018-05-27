@@ -4,9 +4,10 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const _0e85c012 = () => import('..\\pages\\server.vue' /* webpackChunkName: "pages_server" */).then(m => m.default || m)
-const _53a77526 = () => import('..\\pages\\books.vue' /* webpackChunkName: "pages_books" */).then(m => m.default || m)
-const _51685f00 = () => import('..\\pages\\animation.vue' /* webpackChunkName: "pages_animation" */).then(m => m.default || m)
 const _5defc0c6 = () => import('..\\pages\\book.vue' /* webpackChunkName: "pages_book" */).then(m => m.default || m)
+const _51685f00 = () => import('..\\pages\\animation.vue' /* webpackChunkName: "pages_animation" */).then(m => m.default || m)
+const _53a77526 = () => import('..\\pages\\books.vue' /* webpackChunkName: "pages_books" */).then(m => m.default || m)
+const _9e2ca876 = () => import('..\\pages\\preguntas.vue' /* webpackChunkName: "pages_preguntas" */).then(m => m.default || m)
 const _ac6bb164 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
@@ -73,9 +74,9 @@ export function createRouter () {
 			name: "server"
 		},
 		{
-			path: "/books",
-			component: _53a77526,
-			name: "books"
+			path: "/book",
+			component: _5defc0c6,
+			name: "book"
 		},
 		{
 			path: "/animation",
@@ -83,9 +84,14 @@ export function createRouter () {
 			name: "animation"
 		},
 		{
-			path: "/book",
-			component: _5defc0c6,
-			name: "book"
+			path: "/books",
+			component: _53a77526,
+			name: "books"
+		},
+		{
+			path: "/preguntas",
+			component: _9e2ca876,
+			name: "preguntas"
 		},
 		{
 			path: "/",
