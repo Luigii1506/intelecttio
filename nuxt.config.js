@@ -43,7 +43,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify.js', '~/plugins/vue-resource'
+    '@/plugins/vuetify.js', '~/plugins/vue-resource', '~/plugins/vuefire'
   ],
 
   /*
@@ -69,7 +69,7 @@ module.exports = {
     },
 
     vendor: [
-      '@/plugins/vuetify.js', 'vue-resource'
+      '@/plugins/vuetify.js', 'vue-resource', 'jquery'
     ],
 
     extractCSS: true,
