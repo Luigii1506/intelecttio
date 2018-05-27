@@ -11,7 +11,9 @@ import {
   VGrid,
   VToolbar,
   VForm,
-  VTextField
+  VTextField,
+  VChip,
+  VDivider
 } from 'vuetify';
 
 Vue.use(Vuetify, {
@@ -26,7 +28,9 @@ Vue.use(Vuetify, {
     VGrid,
     VToolbar,
     VForm,
-    VTextField
+    VTextField,
+    VChip,
+    VDivider
   },
   theme: {
     primary: '#9c27b0',
