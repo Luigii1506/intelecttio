@@ -46,7 +46,7 @@
 
 
 <script>
-import PreguntaMultiple from '@components/PreguntaMultiple'
+import PreguntaMultiple from '@/components/PreguntaMultiple'
 export default {
     components:{
         PreguntaMultiple,

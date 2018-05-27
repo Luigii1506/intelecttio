@@ -35,7 +35,7 @@
 </template>
 
 <script>
-
+import $ from 'jquery' 
 export default {
   name: 'PreguntaMultiple',
   props: ['id','Correcta','puntos','Pregunta', 'a', 'b', 'c', 'd', 'respuesta', 'acumulado'],
