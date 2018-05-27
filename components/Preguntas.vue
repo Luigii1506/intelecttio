@@ -46,8 +46,7 @@
 
 
 <script>
-import PreguntaMultiple from '@/components/PreguntaMultiple'
-import CuentaPalabras from '@/components/CuentaPalabras'
+import PreguntaMultiple from '@/PreguntaMultiple'
 export default {
     components:{
         PreguntaMultiple,
