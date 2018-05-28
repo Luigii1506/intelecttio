@@ -3,11 +3,13 @@
 <p :v-bind="id" v-bind:alt="Pregunta" class="pregunta" > {{id}}.- {{Pregunta}}</p>
   <div>
 
-    <input type="text" class="pregunta" :v-bind="respuesta" :v-bind:alt="texto" >
-    Ingresa el texto
- 
+    
+    Ingresa tu resupuesta
+    <input type="text" class="pregunta" id="res" :v-bind:alt="texto" >
   </div>
+    <button @click="busca(respuesta,texto)"> boton prueba
 
+    </button>
 
 </div>
     
@@ -15,17 +17,23 @@
 
 
 <script>
+import $ from 'jquery' 
+
 export default {
       props: ['id','Pregunta','respuesta', 'texto'],
   data(){
     return {
-    
+       
       }    
   },
        methods:{
         busca: function(busca,donde){
-            var busca= ["Uno","dos"];
-            var donde= 'uno dos tres cuatro cinco seis siete ocho nueve dies uno dos tres';
+        
+           busca= $("#res").val();
+            busca = busca.split(' ');
+           console.log("la respuesta es "+ busca);
+           // var busca= ["Uno","dos"];
+            //var donde= 'uno dos tres cuatro cinco seis siete ocho nueve dies uno dos tres';
             var palabras=[''];
             var cuenta=0;
             var i=0;
@@ -104,5 +112,10 @@ export default {
   -ms-user-select: none;
   user-select: none;
 
+}
+
+input[type=text] {
+    border: 2px solid blue;
+    border-radius: 4px;
 }
 </style>

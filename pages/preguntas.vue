@@ -42,7 +42,8 @@
    <PreguntaAbierta
         id="4"
        Pregunta="¿Cual es la idea principal del cuento?"
-       respuesta="lalalal"
+       
+       texto="aque va el texto donde se ba a buscar la palabra"
     ></PreguntaAbierta>
 
 
