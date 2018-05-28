@@ -193,14 +193,14 @@ function RespuestasAleatoreas(myArray,a,b,c,d,respuesta){
   padding-left: 10px;
   margin-bottom: 6px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 
 }
-/* Customize the label (the container) */
+/* Cambial el lebel del check */
 .container {
   display: block;
   position: relative;
@@ -220,10 +220,10 @@ function RespuestasAleatoreas(myArray,a,b,c,d,respuesta){
   opacity: 0;
 }
 
-/* Create a custom radio button */
+/* Crea el radio del boton  */
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 10;
   left: 0;
   height: 20px;
   width: 20px;
