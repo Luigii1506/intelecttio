@@ -3,10 +3,10 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _45af8cb2 = () => import('../pages/server.vue' /* webpackChunkName: "pages/server" */).then(m => m.default || m)
-const _66a7050b = () => import('../pages/books.vue' /* webpackChunkName: "pages/books" */).then(m => m.default || m)
-const _8eb91736 = () => import('../pages/animation.vue' /* webpackChunkName: "pages/animation" */).then(m => m.default || m)
 const _e0d701d0 = () => import('../pages/book.vue' /* webpackChunkName: "pages/book" */).then(m => m.default || m)
+const _44f8f96a = () => import('../pages/addBook.vue' /* webpackChunkName: "pages/addBook" */).then(m => m.default || m)
+const _8eb91736 = () => import('../pages/animation.vue' /* webpackChunkName: "pages/animation" */).then(m => m.default || m)
+const _66a7050b = () => import('../pages/books.vue' /* webpackChunkName: "pages/books" */).then(m => m.default || m)
 const _866c919a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
@@ -68,14 +68,14 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
-			path: "/server",
-			component: _45af8cb2,
-			name: "server"
+			path: "/book",
+			component: _e0d701d0,
+			name: "book"
 		},
 		{
-			path: "/books",
-			component: _66a7050b,
-			name: "books"
+			path: "/addBook",
+			component: _44f8f96a,
+			name: "addBook"
 		},
 		{
 			path: "/animation",
@@ -83,9 +83,9 @@ export function createRouter () {
 			name: "animation"
 		},
 		{
-			path: "/book",
-			component: _e0d701d0,
-			name: "book"
+			path: "/books",
+			component: _66a7050b,
+			name: "books"
 		},
 		{
 			path: "/",

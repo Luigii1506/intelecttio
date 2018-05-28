@@ -1,8 +1,25 @@
 <template>
-  <div>
-    <button @click="saveBook" class="btn">Submit</button>
-    <router-link to="/" class="btn grey">Cancel</router-link>
-  </div>
+  <v-layout>
+      <v-flex text-xs-center>
+          <v-form @submit.prevent="saveBook">
+              <v-text-field label="Id del libro" v-model="book_id"></v-text-field>
+              <v-text-field label="Titulo del libro" v-model="titles.title"></v-text-field>
+              <v-text-field label="Subtitulo" v-model="titles.subtitle"></v-text-field>
+              <v-text-field label="Contenido de las paginas, agregar una por una" v-model="texto"></v-text-field>
+              <v-btn @click="addContent">
+                Agregar pagina
+              </v-btn>
+              <v-text-field label="Agregar imagen para cada pagina, agregar una por una" v-model="imageLink"></v-text-field>
+              <v-btn @click="addImage">
+                Agregar imagen
+              </v-btn>
+              <br>
+              <v-btn type="submit">
+                submit
+              </v-btn>
+          </v-form>
+      </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -14,17 +31,23 @@ export default {
   data() {
     return {
       book_id: null,
-      image: null,
-      name: null,
-      array: []
+      images: [],
+      content: [],
+      titles: {
+        title: null,
+        subtitle: null
+      },
+      texto: '',
+      imageLink: ''
     }
   },
   methods: {
     saveBook() {
       db.collection('books').add({
-        image: 'prueba no name',
-        book_id: 2,
-        array: this.array
+        content: this.content,
+        book_id: this.book_id,
+        images: this.images,
+        titles: this.titles
       })
       .then(docRef => {
         console.log('Book added: ', docRef.id)
@@ -32,6 +55,16 @@ export default {
       .catch(error => {
         console.error('Error adding book', error)
       })
+    },
+    addContent() {
+      console.log(this.content)
+      this.content.push(this.texto)
+      this.texto = ''
+    },
+    addImage() {
+      console.log(this.images)
+      this.images.push(this.imageLink)
+      this.imageLink = ''
     }
   }
 }

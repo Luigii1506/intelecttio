@@ -63,7 +63,7 @@ export default {
       fixed: false,
       items: [
         { icon: 'apps', title: 'Home', to: '/' },
-        { icon: 'file_upload', title: 'Agregar libro', to: '/server' },
+        { icon: 'file_upload', title: 'Agregar libro', to: '/addBook' },
         { icon: 'import_contacts', title: 'Catalogo de libros', to: '/books' },
         { icon: 'bookmark', title: 'Notas', to: '/notas' },
         { icon: 'brush', title: 'Animaciones', to: '/animation' },
