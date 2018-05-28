@@ -2,10 +2,10 @@
 <div>
 <p :v-bind="id" v-bind:alt="Pregunta" class="pregunta" > {{id}}.- {{Pregunta}}</p>
   <div>
-    <label >
-    <input type="text"  :v-bind="respuesta" :v-bind:alt="texto" >
+
+    <input type="text" class="pregunta" :v-bind="respuesta" :v-bind:alt="texto" >
     Ingresa el texto
-    </label>
+ 
   </div>
 
 
@@ -88,3 +88,21 @@ export default {
     }
 }
 </script>
+
+
+<style scoped>
+
+.pregunta{
+  display: block;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+</style>

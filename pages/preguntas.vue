@@ -40,8 +40,8 @@
    </PreguntaMultiple>
 
    <PreguntaAbierta
-        id="8"
-       Pregunta="kdjfalkjdflka"
+        id="4"
+       Pregunta="¿Cual es la idea principal del cuento?"
        respuesta="lalalal"
     ></PreguntaAbierta>
 
@@ -69,3 +69,8 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+</style>
+

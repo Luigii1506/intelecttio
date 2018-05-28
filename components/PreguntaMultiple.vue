@@ -186,7 +186,8 @@ function RespuestasAleatoreas(myArray,a,b,c,d,respuesta){
 
 </script>
 
-<style>
+<style scoped >
+
 .pregunta{
   display: block;
   position: relative;
@@ -231,10 +232,6 @@ function RespuestasAleatoreas(myArray,a,b,c,d,respuesta){
   border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
