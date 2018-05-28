@@ -65,8 +65,10 @@ export default {
         { icon: 'apps', title: 'Home', to: '/' },
         { icon: 'file_upload', title: 'Agregar libro', to: '/addBook' },
         { icon: 'import_contacts', title: 'Catalogo de libros', to: '/books' },
+        { icon: 'edit', title: 'Editar libro', to: '/edit' },
         { icon: 'bookmark', title: 'Notas', to: '/notas' },
         { icon: 'brush', title: 'Animaciones', to: '/animation' },
+
       ],
       miniVariant: false,
       right: true,

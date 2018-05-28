@@ -3,10 +3,12 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _e0d701d0 = () => import('../pages/book.vue' /* webpackChunkName: "pages/book" */).then(m => m.default || m)
 const _44f8f96a = () => import('../pages/addBook.vue' /* webpackChunkName: "pages/addBook" */).then(m => m.default || m)
 const _8eb91736 = () => import('../pages/animation.vue' /* webpackChunkName: "pages/animation" */).then(m => m.default || m)
-const _66a7050b = () => import('../pages/books.vue' /* webpackChunkName: "pages/books" */).then(m => m.default || m)
+const _6640574e = () => import('../pages/books/index.vue' /* webpackChunkName: "pages/books/index" */).then(m => m.default || m)
+const _4533d17c = () => import('../pages/edit/index.vue' /* webpackChunkName: "pages/edit/index" */).then(m => m.default || m)
+const _654002e4 = () => import('../pages/edit/_id.vue' /* webpackChunkName: "pages/edit/_id" */).then(m => m.default || m)
+const _d6105594 = () => import('../pages/books/_id.vue' /* webpackChunkName: "pages/books/_id" */).then(m => m.default || m)
 const _866c919a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
@@ -68,11 +70,6 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
-			path: "/book",
-			component: _e0d701d0,
-			name: "book"
-		},
-		{
 			path: "/addBook",
 			component: _44f8f96a,
 			name: "addBook"
@@ -84,8 +81,23 @@ export function createRouter () {
 		},
 		{
 			path: "/books",
-			component: _66a7050b,
+			component: _6640574e,
 			name: "books"
+		},
+		{
+			path: "/edit",
+			component: _4533d17c,
+			name: "edit"
+		},
+		{
+			path: "/edit/:id",
+			component: _654002e4,
+			name: "edit-id"
+		},
+		{
+			path: "/books/:id",
+			component: _d6105594,
+			name: "books-id"
 		},
 		{
 			path: "/",

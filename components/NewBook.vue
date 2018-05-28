@@ -2,10 +2,10 @@
   <v-layout>
       <v-flex text-xs-center>
           <v-form @submit.prevent="saveBook">
-              <v-text-field label="Id del libro" v-model="book_id"></v-text-field>
+              <v-text-field label="Id del libro" v-model="book_id" type="number"></v-text-field>
               <v-text-field label="Titulo del libro" v-model="titles.title"></v-text-field>
               <v-text-field label="Subtitulo" v-model="titles.subtitle"></v-text-field>
-              <v-text-field label="Contenido de las paginas, agregar una por una" v-model="texto"></v-text-field>
+              <v-text-field label="Contenido de las paginas, agregar una por una" v-model="texto" textarea></v-text-field>
               <v-btn @click="addContent">
                 Agregar pagina
               </v-btn>

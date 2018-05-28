@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Lista de libros</h2>
+    <h2>Lista de libros a editar</h2>
     <v-list :style="{background: '#fffeee'}">
       <v-list-tile
         v-for="book in books"
@@ -11,8 +11,12 @@
             <v-list-tile-title>{{ book.titles.title }}</v-list-tile-title>
             <v-list-tile-sub-title>{{ book.titles.subtitle }}</v-list-tile-sub-title>
           </v-list-tile-content>
+          <router-link :to="{ name: 'edit-id', params: {id: book.book_id} }">
+            <i><v-icon dark right :style="{color: 'red'}">arrow_forward</v-icon></i>
+          </router-link>
       </v-list-tile>
     </v-list>
+
   </div>
 </template>
 
