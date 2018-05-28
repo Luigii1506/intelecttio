@@ -46,7 +46,9 @@
        texto="aque va el texto donde se ba a buscar la palabra"
     ></PreguntaAbierta>
 
-
+    <button @click="pruebaRespuesta()">
+        este es de preguntas
+    </button>
 
     </div>
 
@@ -61,12 +63,15 @@ import PreguntaMultiple from '@/components/PreguntaMultiple'
 
 
 export default {
+    
     components:{
         PreguntaMultiple,
-        PreguntaAbierta
-        
-    
-    
+        PreguntaAbierta    
+    },
+    methods: {
+        pruebaRespuesta: function(){
+            console.log("la respuesta es "+this.resultados);
+        }
     }
 }
 </script>

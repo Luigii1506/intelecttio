@@ -206,7 +206,7 @@ function RespuestasAleatoreas(myArray,a,b,c,d,respuesta){
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   cursor: pointer;
   font-size: 15px;
   -webkit-user-select: none;
@@ -224,7 +224,7 @@ function RespuestasAleatoreas(myArray,a,b,c,d,respuesta){
 /* Crea el radio del boton  */
 .checkmark {
   position: absolute;
-  top: 10;
+  top: 5;
   left: 0;
   height: 20px;
   width: 20px;

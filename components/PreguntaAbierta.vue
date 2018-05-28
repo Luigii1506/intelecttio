@@ -4,7 +4,7 @@
   <div>
 
     
-    Ingresa tu resupuesta
+    <p class="pregunta">Ingresa tu resupuesta </p>
     <input type="text" class="pregunta" id="res" :v-bind:alt="texto" >
   </div>
     <button @click="busca(respuesta,texto)"> boton prueba
@@ -20,7 +20,7 @@
 import $ from 'jquery' 
 
 export default {
-      props: ['id','Pregunta','respuesta', 'texto'],
+      props: ['id','Pregunta','respuesta', 'texto','resultados'],
   data(){
     return {
        
@@ -91,7 +91,7 @@ export default {
             }
                    
             console.log(resultados);
-            
+            return this.resultados;
         }
     }
 }
