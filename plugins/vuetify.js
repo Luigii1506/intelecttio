@@ -13,7 +13,8 @@ import {
   VForm,
   VTextField,
   VChip,
-  VDivider
+  VDivider,
+  VRadioGroup
 } from 'vuetify';
 
 Vue.use(Vuetify, {
@@ -30,7 +31,8 @@ Vue.use(Vuetify, {
     VForm,
     VTextField,
     VChip,
-    VDivider
+    VDivider,
+    VRadioGroup
   },
   theme: {
     primary: '#9c27b0',
