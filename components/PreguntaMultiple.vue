@@ -1,20 +1,19 @@
 <template >
-  <div  :v-bind="puntos" v-bind:alt="resultado">
-    <p :v-bind="id" v-bind:alt="Pregunta" class="pregunta" > {{id}}.- {{Pregunta}}</p>
+  <div>
+    <p class="pregunta" > {{index}}.- {{preguntas[index].pregunta}}</p>
     <v-radio-group column>
-      <v-radio label="Option 1" :value="a" @click="check(a)"></v-radio>
-      <v-radio label="Option 2" :value="b" @click="check(b)"></v-radio>
-      <v-radio label="Option 3" :value="c" @click="check(c)"></v-radio>
-      <v-radio label="Option 4" :value="d" @click="check(d)"></v-radio>
+      <v-radio :label="preguntas[index].a" :value="preguntas[index].a" @click="check(preguntas[index].a)" color="indigo darken-3"></v-radio>
+      <v-radio :label="preguntas[index].b" :value="preguntas[index].b" @click="check(preguntas[index].b)" color="indigo darken-3"></v-radio>
+      <v-radio :label="preguntas[index].c" :value="preguntas[index].c" @click="check(preguntas[index].c)" color="indigo darken-3"></v-radio>
+      <v-radio :label="preguntas[index].d" :value="preguntas[index].d" @click="check(preguntas[index].d)" color="indigo darken-3"></v-radio>
     </v-radio-group>
   </div>
 </template>
 
 <script>
-import $ from 'jquery'
 export default {
   name: 'PreguntaMultiple',
-  props: ['id','Correcta','puntos','Pregunta', 'a', 'b', 'c', 'd', 'respuesta', 'acumulado'],
+  props: ['preguntas', 'index'],
   data(){
     return {
       resultado: 0,
@@ -22,13 +21,10 @@ export default {
     }
   },
   methods: {
-    test () {
-      console.log(this.answer)
-    },
     check(value) {
       this.answer = value
       console.log(this.answer)
-      if(this.answer == this.respuesta) {
+      if(this.answer == this.preguntas[this.index].respuesta) {
         console.log('correcto')
         this.resultado = 1
       } else {

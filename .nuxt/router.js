@@ -3,13 +3,14 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _1824c12a = () => import('../pages/preguntas.vue' /* webpackChunkName: "pages/preguntas" */).then(m => m.default || m)
-const _4533d17c = () => import('../pages/edit/index.vue' /* webpackChunkName: "pages/edit/index" */).then(m => m.default || m)
-const _6640574e = () => import('../pages/books/index.vue' /* webpackChunkName: "pages/books/index" */).then(m => m.default || m)
-const _8eb91736 = () => import('../pages/animation.vue' /* webpackChunkName: "pages/animation" */).then(m => m.default || m)
+const _7d3b7fa6 = () => import('../pages/preguntas/index.vue' /* webpackChunkName: "pages/preguntas/index" */).then(m => m.default || m)
 const _44f8f96a = () => import('../pages/addBook.vue' /* webpackChunkName: "pages/addBook" */).then(m => m.default || m)
-const _d6105594 = () => import('../pages/books/_id.vue' /* webpackChunkName: "pages/books/_id" */).then(m => m.default || m)
+const _8eb91736 = () => import('../pages/animation.vue' /* webpackChunkName: "pages/animation" */).then(m => m.default || m)
+const _6640574e = () => import('../pages/books/index.vue' /* webpackChunkName: "pages/books/index" */).then(m => m.default || m)
+const _4533d17c = () => import('../pages/edit/index.vue' /* webpackChunkName: "pages/edit/index" */).then(m => m.default || m)
 const _654002e4 = () => import('../pages/edit/_id.vue' /* webpackChunkName: "pages/edit/_id" */).then(m => m.default || m)
+const _d6105594 = () => import('../pages/books/_id.vue' /* webpackChunkName: "pages/books/_id" */).then(m => m.default || m)
+const _ca272c56 = () => import('../pages/preguntas/_id.vue' /* webpackChunkName: "pages/preguntas/_id" */).then(m => m.default || m)
 const _866c919a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
@@ -72,23 +73,8 @@ export function createRouter () {
     routes: [
 		{
 			path: "/preguntas",
-			component: _1824c12a,
+			component: _7d3b7fa6,
 			name: "preguntas"
-		},
-		{
-			path: "/edit",
-			component: _4533d17c,
-			name: "edit"
-		},
-		{
-			path: "/books",
-			component: _6640574e,
-			name: "books"
-		},
-		{
-			path: "/animation",
-			component: _8eb91736,
-			name: "animation"
 		},
 		{
 			path: "/addBook",
@@ -96,14 +82,34 @@ export function createRouter () {
 			name: "addBook"
 		},
 		{
-			path: "/books/:id",
-			component: _d6105594,
-			name: "books-id"
+			path: "/animation",
+			component: _8eb91736,
+			name: "animation"
+		},
+		{
+			path: "/books",
+			component: _6640574e,
+			name: "books"
+		},
+		{
+			path: "/edit",
+			component: _4533d17c,
+			name: "edit"
 		},
 		{
 			path: "/edit/:id",
 			component: _654002e4,
 			name: "edit-id"
+		},
+		{
+			path: "/books/:id",
+			component: _d6105594,
+			name: "books-id"
+		},
+		{
+			path: "/preguntas/:id",
+			component: _ca272c56,
+			name: "preguntas-id"
 		},
 		{
 			path: "/",

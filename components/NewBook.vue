@@ -13,7 +13,16 @@
               <v-btn @click="addImage">
                 Agregar imagen
               </v-btn>
-              <br>
+              <v-text-field label="Pregunta" v-model="preguntaText"></v-text-field>
+              <v-text-field label="Respuesta a" v-model="a"></v-text-field>
+              <v-text-field label="Respuesta b" v-model="b"></v-text-field>
+              <v-text-field label="Respuesta c" v-model="c"></v-text-field>
+              <v-text-field label="Respuesta d" v-model="d"></v-text-field>
+              <v-text-field label="Respuesta" v-model="respuestaText"></v-text-field>
+              <v-btn @click="addQuestion">
+                Agregar pregunta
+              </v-btn>
+              <hr>
               <v-btn type="submit">
                 submit
               </v-btn>
@@ -33,12 +42,20 @@ export default {
       book_id: null,
       images: [],
       content: [],
+      preguntas: [],
       titles: {
         title: null,
         subtitle: null
       },
       texto: '',
-      imageLink: ''
+      imageLink: '',
+      a: '',
+      b: '',
+      c: '',
+      d: '',
+      respuestaText: '',
+      preguntaText: '',
+      arreglo: 0
     }
   },
   methods: {
@@ -47,7 +64,8 @@ export default {
         content: this.content,
         book_id: this.book_id,
         images: this.images,
-        titles: this.titles
+        titles: this.titles,
+        preguntas: this.preguntas
       })
       .then(docRef => {
         console.log('Book added: ', docRef.id)
@@ -57,14 +75,31 @@ export default {
       })
     },
     addContent() {
-      console.log(this.content)
       this.content.push(this.texto)
+      console.log(this.content)
       this.texto = ''
     },
     addImage() {
-      console.log(this.images)
       this.images.push(this.imageLink)
+      console.log(this.images)
       this.imageLink = ''
+    },
+    addQuestion() {
+      let pregunta = {}
+      pregunta.a = this.a
+      pregunta.b = this.b
+      pregunta.c = this.c
+      pregunta.d = this.d
+      pregunta.respuesta = this.respuestaText
+      pregunta.pregunta = this.preguntaText
+      this.preguntas.push(pregunta)
+      console.log(this.preguntas)
+      this.a = ''
+      this.b = ''
+      this.c = ''
+      this.d = ''
+      this.preguntaText = ''
+      this.respuestaText = ''
     }
   }
 }

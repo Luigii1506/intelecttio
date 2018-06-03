@@ -16,7 +16,7 @@
         </v-flex>
       </v-layout>
       <v-layout row v-if="!mostrarImagen">
-        <v-flex xs5>
+        <v-flex xs5 v-if="finalCuento">
           <v-btn @click="pagina--" :style="{backgroundColor: '#F7C122', width: '100%', padding: 0, marginLeft: 0, marginRight: 0}" large>
             <v-icon dark left>arrow_back</v-icon>
             Atras
@@ -34,6 +34,14 @@
           </v-btn>
         </v-flex>
       </v-layout>
+      <v-flex xs5 v-if="irPreguntas">
+        <router-link :to="{ name: 'preguntas-id', params: {id: $route.params.id} }">
+          <v-btn :style="{backgroundColor: '#62D4D4', width: '100%', padding: 0, marginLeft: 'auto', marginRight: 'auto', display: 'block', textAlign: 'center'}" large>
+            Ir al cuestionario
+            <v-icon dark right>arrow_forward</v-icon>
+          </v-btn>
+        </router-link>
+      </v-flex>
     </v-container>
   </div>
 </template>
@@ -56,6 +64,7 @@ export default {
       mostrarImagen: false,
       pagina: 0,
       finalCuento: true,
+      irPreguntas: false
     }
   },
   beforeRouteEnter(to, from, next) {
@@ -100,13 +109,14 @@ export default {
     nextPage() {
      this.mostrarImagen = true;
      const self = this;
-     if(this.pagina >= 10) {
-       this.finalCuento = false;
+     if(this.pagina >= this.content.length) {
+       this.finalCuento = true;
+       this.irPreguntas = true;
      } else {
          this.intervalid1 = setTimeout(function() {
-         self.pagina++;
          self.mostrarImagen = false;
-       }, 3000);
+         self.pagina++;
+       }, 1000);
      }
    }
   }
