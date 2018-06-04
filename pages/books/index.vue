@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div>
+      <VuetifyLogo class="logo-wrapper"/>
+    </div>
     <h2>Lista de libros a leer</h2>
     <v-list :style="{background: '#fffeee'}">
       <v-list-tile
@@ -24,6 +27,7 @@
 
 import { db } from '~/plugins/vuefire'
 import NewBook from '~/components/NewBook'
+import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   data() {
@@ -32,7 +36,8 @@ export default {
     }
   },
   components: {
-    NewBook: NewBook
+    NewBook: NewBook,
+    VuetifyLogo: VuetifyLogo
   },
   created() {
     db.collection('books').get().then(
@@ -58,5 +63,11 @@ export default {
 <style scoped>
 h2 {
   text-align: center;
+}
+
+.logo-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 </style>

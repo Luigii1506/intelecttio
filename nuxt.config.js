@@ -58,6 +58,14 @@ module.exports = {
   */
   modules: [],
 
+  generate: {
+    routes: [
+      '/edit/0',
+      '/books/0',
+      '/preguntas/0'
+    ]
+  },
+
   /*
   ** Build configuration
   */

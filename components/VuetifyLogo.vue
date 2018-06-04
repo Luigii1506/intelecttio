@@ -1,5 +1,5 @@
 <template>
-  <img class="VuetifyLogo" alt="Vuetify Logo" src="http://www.munihuamanguilla.gob.pe/images/avisos/Open-Book.png">
+  <img class="VuetifyLogo" alt="Vuetify Logo" src="~/static/logo.png">
 </template>
 
 <style>

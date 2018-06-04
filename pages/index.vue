@@ -36,7 +36,7 @@ h1 {
     letter-spacing: -1px;
     line-height: 1;
     text-align: center;
-    background-color: #3f50b5;
+    background-color: #286b88;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 12px;
