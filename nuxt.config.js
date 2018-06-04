@@ -50,7 +50,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify.js', '~/plugins/vue-resource', '~/plugins/vuefire'
+    '@/plugins/vuetify.js', '~/plugins/vue-resource', '~/plugins/vuefire', '~/plugins/vue-notifications'
   ],
 
   /*
@@ -76,7 +76,7 @@ module.exports = {
     },
 
     vendor: [
-      '@/plugins/vuetify.js', 'vue-resource', 'jquery'
+      '~/plugins/vuetify.js', 'vue-resource', '~/plugins/vue-notifications'
     ],
 
     extractCSS: true,

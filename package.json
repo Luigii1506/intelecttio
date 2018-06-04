@@ -23,7 +23,9 @@
     "firebase": "^5.0.3",
     "jquery": "^3.3.1",
     "mdi": "^2.2.43",
+    "mini-toastr": "^0.8.1",
     "nuxt": "^1.0.0",
+    "vue-notifications": "^0.9.0",
     "vue-resource": "^1.5.0",
     "vuefire": "^2.0.0-alpha.11",
     "vuetify": "^1.0.3"

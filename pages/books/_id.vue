@@ -1,20 +1,22 @@
 <template>
   <div>
-    <transition name="fade">
+    <transition>
       <div v-if="mostrarImagen" class="div-image">
-        <img :src="images[pagina]" class="imagen"/>
+          <img :src="images[pagina]" class="imagen"/>
       </div>
     </transition>
     <v-container :style="{paddingTop: 0}">
-      <v-layout row>
-        <v-flex>
-          <div v-if="pagina === 0">
-            <h1>{{ titles.title }} </h1>
-            <h2>{{ titles.subtitle }} </h2>
-          </div>
-          <pre>{{ content[pagina] }}</pre>
-        </v-flex>
-      </v-layout>
+      <transition name="fade">
+        <v-layout row v-if="textFlag">
+          <v-flex>
+            <div v-if="pagina === 0">
+              <h1>{{ titles.title }} </h1>
+              <h2>{{ titles.subtitle }} </h2>
+            </div>
+            <pre>{{ content[pagina] }}</pre>
+          </v-flex>
+        </v-layout>
+      </transition>
       <v-layout row v-if="!mostrarImagen">
         <v-flex xs5 v-if="finalCuento">
           <v-btn @click="pagina--" :style="{backgroundColor: '#F7C122', width: '100%', padding: 0, marginLeft: 0, marginRight: 0}" large>
@@ -34,14 +36,12 @@
           </v-btn>
         </v-flex>
       </v-layout>
-      <v-flex xs5 v-if="irPreguntas">
         <router-link :to="{ name: 'preguntas-id', params: {id: $route.params.id} }">
-          <v-btn :style="{backgroundColor: '#62D4D4', width: '100%', padding: 0, marginLeft: 'auto', marginRight: 'auto', display: 'block', textAlign: 'center'}" large>
+          <v-btn v-if="irPreguntas" :style="{backgroundColor: '#62D4D4', width: '100%', padding: 0, marginLeft: 'auto', marginRight: 'auto', display: 'block', textAlign: 'center'}" large>
             Ir al cuestionario
             <v-icon dark right>arrow_forward</v-icon>
           </v-btn>
         </router-link>
-      </v-flex>
     </v-container>
   </div>
 </template>
@@ -64,7 +64,8 @@ export default {
       mostrarImagen: false,
       pagina: 0,
       finalCuento: true,
-      irPreguntas: false
+      irPreguntas: false,
+      textFlag: true
     }
   },
   beforeRouteEnter(to, from, next) {
@@ -107,16 +108,19 @@ export default {
       }
     },
     nextPage() {
+     this.textFlag = false;
      this.mostrarImagen = true;
      const self = this;
      if(this.pagina >= this.content.length) {
        this.finalCuento = true;
        this.irPreguntas = true;
+       this.images[++this.pagina] = 'http://www.argbackoffice.com/wp-content/uploads/2015/08/faqs.png'
      } else {
          this.intervalid1 = setTimeout(function() {
          self.mostrarImagen = false;
+         self.textFlag = true;
          self.pagina++;
-       }, 1000);
+       }, 3000);
      }
    }
   }
@@ -129,13 +133,21 @@ export default {
 
 .div-image {
   position: relative;
+  height: 50vh;
 }
 
 .imagen {
   width: 100%;
+  height: 100%;
   position: absolute;
   z-index: 1;
   background-color: #FFFEEE;
+}
+
+.perro {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 pre {
@@ -168,10 +180,17 @@ h2 {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .8s;
+  transition: opacity .3s;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+.fade1-enter-active {
+  transition: opacity .2s;
+}
+.fade1-enter {
+  opacity: 1;
 }
 
 </style>

@@ -15,6 +15,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 import nuxt_plugin_vuetify_7b76339d from 'nuxt_plugin_vuetify_7b76339d' // Source: ../plugins/vuetify.js
 import nuxt_plugin_vueresource_57806eeb from 'nuxt_plugin_vueresource_57806eeb' // Source: ../plugins/vue-resource
 import nuxt_plugin_vuefire_1654c086 from 'nuxt_plugin_vuefire_1654c086' // Source: ../plugins/vuefire
+import nuxt_plugin_vuenotifications_9509a7aa from 'nuxt_plugin_vuenotifications_9509a7aa' // Source: ../plugins/vue-notifications
 
 
 // Component: <no-ssr>
@@ -139,6 +140,7 @@ async function createApp (ssrContext) {
   if (typeof nuxt_plugin_vuetify_7b76339d === 'function') await nuxt_plugin_vuetify_7b76339d(app.context, inject)
   if (typeof nuxt_plugin_vueresource_57806eeb === 'function') await nuxt_plugin_vueresource_57806eeb(app.context, inject)
   if (typeof nuxt_plugin_vuefire_1654c086 === 'function') await nuxt_plugin_vuefire_1654c086(app.context, inject)
+  if (typeof nuxt_plugin_vuenotifications_9509a7aa === 'function') await nuxt_plugin_vuenotifications_9509a7aa(app.context, inject)
   
 
   // If server-side, wait for async component to be resolved first

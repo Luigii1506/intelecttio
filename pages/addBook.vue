@@ -15,3 +15,11 @@ export default {
 }
 
 </script>
+
+<style>
+
+.btn__content {
+  height: auto;
+}
+
+</style>

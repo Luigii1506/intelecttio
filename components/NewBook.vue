@@ -10,8 +10,10 @@
                 Agregar pagina
               </v-btn>
               <v-text-field label="Agregar imagen para cada pagina, agregar una por una" v-model="imageLink"></v-text-field>
-              <v-btn @click="addImage">
+              <v-btn @click="addImage" :style="{fontSize: 'auto'}">
+                  <span>
                 Agregar imagen
+              </span>
               </v-btn>
               <v-text-field label="Pregunta" v-model="preguntaText"></v-text-field>
               <v-text-field label="Respuesta a" v-model="a"></v-text-field>
@@ -20,7 +22,9 @@
               <v-text-field label="Respuesta d" v-model="d"></v-text-field>
               <v-text-field label="Respuesta" v-model="respuestaText"></v-text-field>
               <v-btn @click="addQuestion">
-                Agregar pregunta
+                <span>
+                  Agregar pregunta
+                </span>
               </v-btn>
               <hr>
               <v-btn type="submit">
@@ -55,7 +59,8 @@ export default {
       d: '',
       respuestaText: '',
       preguntaText: '',
-      arreglo: 0
+      arreglo: 0,
+      prueba: 'hehe'
     }
   },
   methods: {
@@ -76,11 +81,14 @@ export default {
     },
     addContent() {
       this.content.push(this.texto)
+      this.showContentSaved()
       console.log(this.content)
       this.texto = ''
     },
     addImage() {
+      this.showImageSaved()
       this.images.push(this.imageLink)
+
       console.log(this.images)
       this.imageLink = ''
     },
@@ -101,7 +109,19 @@ export default {
       this.preguntaText = ''
       this.respuestaText = ''
     }
-  }
+  },
+  notifications: {
+      showContentSaved: {
+        title: 'Agregar pagina',
+        message: 'Se agrego exitosamente',
+        type: 'warn'
+      },
+      showImageSaved: {
+        title: 'Agregar image',
+        message: 'Se agrego exitosamente',
+        type: 'success'
+      }
+    }
 }
 
 </script>
